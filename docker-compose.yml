@@ -1,0 +1,10 @@
+version: "3.8"
+
+services:
+  shadowapi:
+    build: .
+    container_name: shadowapi
+    volumes:
+      - ./examples:/app/examples
+      - ./reports:/app/reports
+    command: ["scan", "--traffic", "examples/traffic.har", "--spec", "examples/declared_spec.json", "--output-html", "reports/audit.html"]
