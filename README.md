@@ -1,8 +1,10 @@
 # ShadowAPI 🔍
 
+> **Status:** prototype. A personal security-research project, not a production product. Expect rough edges; issues and pull requests are welcome.
+
 > **Autonomous API Drift & Zombie Endpoint Discovery Engine**
 
-ShadowAPI is an enterprise-grade automated API surface analysis and drift detection platform. It continuously evaluates observed HTTP traffic (HAR archives, proxy dumps, gateway logs) and contrasts inferred runtime schemas against declared ground-truth OpenAPI specifications to pinpoint shadow (undocumented), zombie (deprecated yet active), and drifted APIs.
+ShadowAPI is a prototype automated API surface analysis and drift detection platform. It continuously evaluates observed HTTP traffic (HAR archives, proxy dumps, gateway logs) and contrasts inferred runtime schemas against declared ground-truth OpenAPI specifications to pinpoint shadow (undocumented), zombie (deprecated yet active), and drifted APIs.
 
 ---
 
@@ -93,3 +95,7 @@ Run with Docker Compose:
 ```bash
 docker-compose up --build
 ```
+
+## License
+
+MIT. See [LICENSE](LICENSE).

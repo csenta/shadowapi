@@ -3,12 +3,13 @@ import tempfile
 import unittest
 from shadowapi.cli import handle_diff, handle_synthesize
 import argparse
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestCLI(unittest.TestCase):
     def setUp(self):
-        self.spec_file = "/home/emprogue/Projects/shadowapi/examples/declared_spec.json"
-        self.har_file = "/home/emprogue/Projects/shadowapi/examples/traffic.har"
+        self.spec_file = os.path.join(_ROOT, "examples", "declared_spec.json")
+        self.har_file = os.path.join(_ROOT, "examples", "traffic.har")
 
     def test_cli_synthesize(self):
         with tempfile.NamedTemporaryFile(delete=False, suffix=".json") as f:

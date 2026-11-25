@@ -1,11 +1,12 @@
 import os
 import unittest
 from shadowapi.core.har_parser import HARParser
+_ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 
 class TestHARParser(unittest.TestCase):
     def setUp(self):
-        self.example_har = "/home/emprogue/Projects/shadowapi/examples/traffic.har"
+        self.example_har = os.path.join(_ROOT, "examples", "traffic.har")
 
     def test_parse_har_file(self):
         self.assertTrue(os.path.isfile(self.example_har))
